@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: AR
+Build-Jdk: 17.0.10
+Implementation-Title: pizzeriaSpring
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: net.codejava
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/pizzeriaSpring
+Created-By: Maven Integration for Eclipse
+

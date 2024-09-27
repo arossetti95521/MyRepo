@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<style>
+table, th, td {
+	border: 3px solid black;
+	border-collapse: collapse;
+	text-align: center;	width: 49%;
+	background-color: #fff66f;
+	
+	font-weight: bold;
+}
+h1 {
+	background-color: #fff44f;
+	padding: 0px;
+	width: 49%;
+	text-align: center;
+	font-size: 35px;
+	font-weight: bold;
+	color: black;
+}  
+</style>
+
+<meta charset="utf-8" />
+<title>Modifica Una Pizza</title>
+</head>
+<body>
+	<div align="center">
+		<h1>Modifica Pizza</h1>
+		<br />
+		<form action="#" th:action="@{/update}" th:object="${wrapper}"
+			method="post">
+
+			<table border="0" cellpadding="10">
+
+				<tr>
+					<td>Nome: 
+					 <input type="text" th:field="*{nomepizza}" /> 
+					
+					<input type="hidden" th:value="${wrapper.idpizza}" th:field="*{idpizza}" /> 
+					</td>	 
+				</tr>
+				<tr>
+					<td><label>Impasto:</label>
+
+						<div th:each="i : ${listaImpasti}">
+
+							<input type="radio" th:field="*{impasto}" th:value="${i.id}"
+								th:text="${i.nome}" checked />
+						</div></td>
+				</tr>
+				<tr>
+					<td><label>Ingredienti:</label>
+
+						<div th:each="ingre : ${listaIngredienti}">
+							<input type="checkbox" th:field="*{ingredienti}"
+								th:value="${ingre.id}" /> <label
+								th:for="${#ids.prev('ingredienti')}" th:text="${ingre.nome}">
+							</label>
+
+						</div></td>
+				</tr>
+
+
+				<tr>
+					<td colspan="2"><button type="submit">Salva</button></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>
