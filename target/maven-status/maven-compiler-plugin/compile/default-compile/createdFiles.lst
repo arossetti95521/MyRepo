@@ -1,0 +1,16 @@
+pizzeria\model\Wrapper.class
+pizzeria\service\PizzaService.class
+pizzeria\model\Utente.class
+pizzeria\service\IngredienteService.class
+pizzeria\AppMain.class
+pizzeria\model\Pizza.class
+pizzeria\repo\UtenteRepository.class
+pizzeria\service\UtenteService.class
+pizzeria\controller\ApplicationController.class
+pizzeria\repo\ImpastoRepository.class
+pizzeria\service\ImpastoService.class
+pizzeria\repo\PizzaRepository.class
+pizzeria\controller\RestCont.class
+pizzeria\repo\IngredienteRepository.class
+pizzeria\model\Ingrediente.class
+pizzeria\model\Impasto.class
